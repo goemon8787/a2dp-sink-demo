@@ -1,0 +1,13 @@
+services:
+    server:
+        container_name: a2dp-sink
+        image: a2dp-sink
+        env_file:
+            - .env
+        build:
+            context: .
+            dockerfile: a2dp-sink/Dockerfile
+        tty: true
+        environment:
+            - TZ=Asia/Tokyo
+        working_dir: /workspace
