@@ -6,8 +6,8 @@ bluetoothをコンテナ側から乗っ取るのはかなりきつそう
 
 # ネイティブで構築
 ## 書き換え
-
-```diff:/lib/systemd/system/bluetooth.service
+/lib/systemd/system/bluetooth.service
+```diff
 + ExecStart=/usr/libexec/bluetooth/bluetoothd --plugin=a2dp --compat --noplugin=sap
 - ExecStart=/usr/libexec/bluetooth/bluetoothd
 ```
